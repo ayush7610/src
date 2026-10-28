@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Smart Campus</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="portal-page">
+  <nav class="navbar">
+    <h1><i class="fa-solid fa-user-shield" aria-hidden="true"></i> Smart Campus Admin Dashboard</h1>
+    <div class="user-info"><span id="displayUserName">Admin</span><button type="button" class="logout-btn"><i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i> Logout</button></div>
+  </nav>
+  <main class="container" style="grid-template-columns:minmax(0,1fr)">
+    <section class="panel-card">
+      <h2><i class="fa-solid fa-list-check" aria-hidden="true"></i> All Demo Complaints</h2>
+      <div class="demo-notice" role="note"><strong>Demo mode:</strong> status changes are saved in this browser only. This dashboard is not protected by server-side authorization.</div>
+      <p><button type="button" class="btn-secondary" id="refreshComplaints">Refresh list</button></p>
+      <div class="table-responsive"><table><thead><tr><th>Complaint ID</th><th>Student</th><th>Category / Title</th><th>Location</th><th>Priority</th><th>Status</th><th>Details</th></tr></thead><tbody id="adminComplaintsBody"><tr><td colspan="7" class="loading-state">Loading complaints…</td></tr></tbody></table></div>
+    </section>
+  </main>
+</body>
+</html>
